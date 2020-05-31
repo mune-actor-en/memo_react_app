@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 const initData = {
-  data: [{ message: "sample data", created: new DataCue() }],
+  data: [{ message: "sample data", created: new Date() }],
   message: "please type message",
   mode: "default",
   fdata: [],
@@ -18,6 +18,10 @@ export function memoReducer(state = initData, action) {
 
     case "FIND":
       return findReduce(state, action);
+    
+    //actionが不明な場合はstateをそのまま返す必要があるため、default処理を追記
+    default:
+      return state;
   }
 }
 
