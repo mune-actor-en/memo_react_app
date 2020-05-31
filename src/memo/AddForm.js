@@ -9,6 +9,11 @@ class AddForm extends Component {
     padding: "1px",
     margin: "2px 0px",
   };
+  message = {
+    fontSize: "16pt",
+    color: "#006",
+    margin: "5px 10px",
+  };
   btn = {
     fontSize: "14pt",
     color: "#006",
@@ -26,7 +31,7 @@ class AddForm extends Component {
 
   doChange(e) {
     this.setState({
-      message: e.target.value
+      message: e.target.value,
     });
   }
 
@@ -58,5 +63,4 @@ class AddForm extends Component {
     );
   }
 }
-
 export default connect((state) => state)(AddForm);
