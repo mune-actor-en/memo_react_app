@@ -7,7 +7,7 @@ const initData = {
   fdata: [],
 };
 
-// レデューサー
+// Reducer
 export function memoReducer(state = initData, action) {
   switch (action.type) {
     case "ADD":
@@ -25,7 +25,7 @@ export function memoReducer(state = initData, action) {
   }
 }
 
-// レデュースアクション
+// ReduceAction
 
 // メモ追加のレデュース処理
 function addReduce(state, action) {
@@ -37,7 +37,7 @@ function addReduce(state, action) {
   newdata.unshift(data);
   return {
     data: newdata,
-    message: "Added!",
+    message: 'Added!',
     mode: "default",
     fdata: [],
   };
